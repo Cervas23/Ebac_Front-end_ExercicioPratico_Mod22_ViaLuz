@@ -1,0 +1,31 @@
+.card{
+    background: radial-gradient(circle at 30% 20%, #0B1F3A, #050816 70%);
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+
+.card__poster {
+  width: 100%;
+  display: block;
+}
+
+.card__info {
+  padding: 1rem;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  color: #EAF6FF;
+  margin: 0 0 0.5rem 0;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: #9FB3C8;
+}
