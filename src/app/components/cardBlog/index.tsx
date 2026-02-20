@@ -11,7 +11,8 @@ const CardBlog = ({ artigo }: Props) => {
   const slug = slugify(artigo.title);
 
   return (
-        <article className={styles.blogCard}>
+    <Link href={artigo.url} target="_blank" rel="noopener noreferrer">
+      <article className={styles.blogCard}>
         {artigo.urlToImage && (
           <img src={artigo.urlToImage} alt={artigo.title} />
         )}
@@ -20,12 +21,15 @@ const CardBlog = ({ artigo }: Props) => {
           <h2>{artigo.title}</h2>
 
           <p>{artigo.description}</p>
-
+          
+          <p>{artigo.author}</p>
           <span>
             {new Date(artigo.publishedAt).toLocaleDateString("pt-BR")}
           </span>
         </div>
       </article>
+    </Link>
+        
   );
 };
 

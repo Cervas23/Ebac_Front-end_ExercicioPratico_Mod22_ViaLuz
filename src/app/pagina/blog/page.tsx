@@ -1,8 +1,8 @@
 import BlogList from "@/app/components/blogList";
 import Title from "@/app/components/title";
-import getNews from "@/libs/api/news";
+import {getNews} from "@/libs/api/news";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 const PageBlog = async () => {
   const artigos = await getNews();

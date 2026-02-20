@@ -7,10 +7,10 @@ export interface Destino {
 }
 
 export interface Artigo {
-  author: string | null;
+  author: string;
   title: string;
-  description: string | null;
+  description: string;
   url: string;
-  urlToImage: string | null;
+  urlToImage: string;
   publishedAt: string;
 }
