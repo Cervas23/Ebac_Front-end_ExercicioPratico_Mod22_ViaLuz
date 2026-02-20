@@ -1,0 +1,50 @@
+.destino{
+    padding: 40px;
+    margin: auto;
+    max-width: 720px;
+}
+
+.destino__container{
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+    border-radius: 16px;
+    background: radial-gradient(circle at center, #0b1f3a, #050816);
+}
+
+.destino__imagem{
+    width: 300px;
+    height: 400px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.destino__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.destino__info h2{
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #00E5FF;
+}
+
+.destino__info p{
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #00aabd;
+}
+
+.destino__back{
+    display: block;
+    text-align: right;
+    margin-bottom: 24px;
+    color: #00E5FF;
+    font-weight: 500;
+
+    &:hover{
+        color: #7B5CFF;
+    }
+}

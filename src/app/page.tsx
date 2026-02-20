@@ -3,6 +3,7 @@ import Text from "./components/text";
 import styles from './page.module.css'
 
 export default function Home() {
+
   return (
     <>
     <Title title="Quem somos nós." />
