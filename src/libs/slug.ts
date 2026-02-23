@@ -1,11 +1,11 @@
 export function slugify(text: string) {
   return text
     .toLowerCase()
-    .normalize("NFD")                 // separa acentos
-    .replace(/[\u0300-\u036f]/g, "")  // remove acentos
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")             // espaço -> -
-    .replace(/[^\w-]+/g, "")          // remove caracteres especiais
-    .replace(/--+/g, "-")             // evita --
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-")
     .trim();
 }
