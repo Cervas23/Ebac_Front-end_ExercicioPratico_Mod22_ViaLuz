@@ -3,6 +3,7 @@ export function slugify(text: string) {
     .toLowerCase()
     .normalize("NFD")                 // separa acentos
     .replace(/[\u0300-\u036f]/g, "")  // remove acentos
+    .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")             // espaço -> -
     .replace(/[^\w-]+/g, "")          // remove caracteres especiais
     .replace(/--+/g, "-")             // evita --

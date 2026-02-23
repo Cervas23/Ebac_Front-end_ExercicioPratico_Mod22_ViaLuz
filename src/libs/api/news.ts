@@ -1,5 +1,4 @@
 import { Artigo } from "@/types/types";
-import newsApi from "./axios";
 
 type Data = {
   status: string;
@@ -7,23 +6,18 @@ type Data = {
   articles: Artigo[];
 }
 
-export async function getNews() {
-  try {
-    const response = await newsApi.get<Data>(`${process.env.NEWS_API_URL}`, {
-      params: {
-        country: "us",
-        category: "general",
-        apiKey: process.env.NEWS_API_KEY,
-        
-      },
-    });
-    console.log(response.data.articles);
-    
-    return response.data.articles;
-  }
-  catch (error) {
-    console.error("Erro ao buscar notícias:", error);
-    return [];
-  }
+export async function getNews(): Promise<Artigo[]> {
+
+  const response = await fetch(
+    `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=${process.env.NEWS_API_KEY}`,
+    {
+      next: { revalidate: 3600 }, // ← cache por 1 hora
+    }
+  );
+
+  const data: { articles: Artigo[] } = await response.json();
+
+  return data.articles;
+
 }
 

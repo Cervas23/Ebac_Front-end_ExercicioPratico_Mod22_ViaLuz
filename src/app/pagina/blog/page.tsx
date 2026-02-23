@@ -2,7 +2,7 @@ import BlogList from "@/app/components/blogList";
 import Title from "@/app/components/title";
 import {getNews} from "@/libs/api/news";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 const PageBlog = async () => {
   const artigos = await getNews();

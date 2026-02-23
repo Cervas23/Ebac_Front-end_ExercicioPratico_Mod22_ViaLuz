@@ -2,6 +2,7 @@ import Link from "next/link";
 import { slugify } from "@/libs/slug";
 import styles from "./cardblog.module.css";
 import { Artigo } from "@/types/types";
+import { truncateSmart } from "@/libs/truncate";
 
 type Props = {
   artigo : Artigo;
@@ -9,22 +10,25 @@ type Props = {
 
 const CardBlog = ({ artigo }: Props) => {
   const slug = slugify(artigo.title);
+  
+  const resumeTitle = truncateSmart(artigo.title ?? "", 45);
+  const resumeDescriptiom = truncateSmart(artigo.title ?? "", 90);
 
   return (
-    <Link href={artigo.url} target="_blank" rel="noopener noreferrer">
+    <Link href={`/pagina/blog/${slug}`}>
       <article className={styles.blogCard}>
         {artigo.urlToImage && (
           <img src={artigo.urlToImage} alt={artigo.title} />
         )}
 
         <div className={styles.blogContent}>
-          <h2>{artigo.title}</h2>
+          <h2>{resumeTitle}</h2>
 
-          <p>{artigo.description}</p>
+          <p>{resumeDescriptiom}</p>
           
           <p>{artigo.author}</p>
           <span>
-            {new Date(artigo.publishedAt).toLocaleDateString("pt-BR")}
+            {artigo.publishedAt}
           </span>
         </div>
       </article>
