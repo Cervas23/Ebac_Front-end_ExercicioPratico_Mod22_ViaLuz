@@ -15,7 +15,7 @@ const CardBlog = ({ artigo }: Props) => {
   const resumeDescriptiom = truncateSmart(artigo.title ?? "", 90);
 
   return (
-    <Link href={`/pagina/blog/${slug}`}>
+    <Link href={`/artigos/${slug}`}>
       <article className={styles.blogCard}>
         {artigo.urlToImage && (
           <img src={artigo.urlToImage} alt={artigo.title} />
