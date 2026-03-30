@@ -1,4 +1,4 @@
-import { Artigo } from "@/types/types";
+import { Artigo } from '@/types/types';
 
 export async function getNews(): Promise<Artigo[]> {
   const response = await fetch(
@@ -9,7 +9,7 @@ export async function getNews(): Promise<Artigo[]> {
   );
 
   if (!response.ok) {
-    throw new Error("Erro na API");
+    throw new Error('Erro na API');
   }
 
   const data: { articles: Artigo[] } = await response.json();

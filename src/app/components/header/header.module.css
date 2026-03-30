@@ -1,28 +1,27 @@
 .header {
-    background: radial-gradient(circle at 30% 20%, #0B1F3A, #050816 70%);
-    padding: 1rem 2rem;
+  background: radial-gradient(circle at 30% 20%, #0b1f3a, #050816 70%);
+  padding: 1rem 2rem;
 }
 
-.header__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header__logo a{
-    color: #00E5FF;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2rem;
+.header__logo a {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-.header__nav a{
-    color: #00E5FF;
-    text-decoration: none;
-    margin-left: 1rem;
+.header__nav a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin-left: 1rem;
 
-    &:hover{
-        color: #7B5CFF;
-    }
+  &:hover {
+    color: #7b5cff;
+  }
 }
-

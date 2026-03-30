@@ -1,9 +1,7 @@
-import Title from "../components/title"
+import Title from '../components/title';
 
 const NotFound = () => {
-  return (
-    <Title title="Seu destino não foi encontrado!"/>
-  )
-}
+  return <Title title="Seu destino não foi encontrado!" />;
+};
 
 export default NotFound;

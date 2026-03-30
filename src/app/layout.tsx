@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import "@/styles/globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import Header from './components/header';
+import Footer from './components/footer';
 
 export const metadata: Metadata = {
-  title: "ViaLuz",
-  description: "Todo o planejamento da sua viagem feito tão rápido e perfeito, quanto a velocidade da luz.",
+  title: 'ViaLuz',
+  description:
+    'Todo o planejamento da sua viagem feito tão rápido e perfeito, quanto a velocidade da luz.',
 };
 
 export default function RootLayout({
@@ -16,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

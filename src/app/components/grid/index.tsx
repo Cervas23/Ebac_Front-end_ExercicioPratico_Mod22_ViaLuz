@@ -1,17 +1,19 @@
-import { Destino } from "@/types/types";
-import Card from "../card";
-import styles from './grid.module.css'
+import { Destino } from '@/types/types';
+import Card from '../card';
+import styles from './grid.module.css';
 
 type Props = {
-    destinos : Destino[]
-}
+  destinos: Destino[];
+};
 
-const Grid = ({destinos} : Props) => {
+const Grid = ({ destinos }: Props) => {
   return (
     <section className={styles.grid}>
-        {destinos.map(destino => <Card key={destino.id} destino={destino}/>)}
+      {destinos.map((destino) => (
+        <Card key={destino.id} destino={destino} />
+      ))}
     </section>
-  )
-}
+  );
+};
 
-export default Grid;    
+export default Grid;

@@ -1,7 +1,7 @@
-import Title from "./components/title";
-import Text from "./components/text";
-import styles from "./page.module.css";
-import Image from "next/image";
+import Title from './components/title';
+import Text from './components/text';
+import styles from './page.module.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (

@@ -1,15 +1,14 @@
-.about{
-  display:grid;
+.about {
+  display: grid;
   grid-template-columns: 1fr 1fr; /* duas colunas iguais */
   min-height: 80vh;
   background: radial-gradient(circle at center, #0b1f3a, #050816);
-
 }
 
 .about__content {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   padding: 3rem;
 }
 

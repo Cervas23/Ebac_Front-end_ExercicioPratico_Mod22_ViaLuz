@@ -1,9 +1,9 @@
-import { Destino } from "@/types/types";
-import styles from "./card.module.css";
-import Link from "next/link";
-import { slugify } from "@/libs/slug";
-import { truncateSmart } from "@/libs/truncate";
-import Image from "next/image";
+import { Destino } from '@/types/types';
+import styles from './card.module.css';
+import Link from 'next/link';
+import { slugify } from '@/libs/slug';
+import { truncateSmart } from '@/libs/truncate';
+import Image from 'next/image';
 
 type Props = {
   destino: Destino;
@@ -13,7 +13,7 @@ const Card = ({ destino }: Props) => {
   const { id, local, descricao, imagem } = destino;
   const slug = slugify(local);
 
-  const resumeDescriptiom = truncateSmart(descricao ?? "", 70);
+  const resumeDescriptiom = truncateSmart(descricao ?? '', 70);
 
   return (
     <div className={styles.card} key={id}>

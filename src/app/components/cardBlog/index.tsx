@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { slugify } from "@/libs/slug";
-import styles from "./cardblog.module.css";
-import { Artigo } from "@/types/types";
-import { truncateSmart } from "@/libs/truncate";
-import Image from "next/image";
+import Link from 'next/link';
+import { slugify } from '@/libs/slug';
+import styles from './cardblog.module.css';
+import { Artigo } from '@/types/types';
+import { truncateSmart } from '@/libs/truncate';
+import Image from 'next/image';
 
 type Props = {
   artigo: Artigo;
@@ -12,8 +12,8 @@ type Props = {
 const CardBlog = ({ artigo }: Props) => {
   const slug = slugify(artigo.title);
 
-  const resumeTitle = truncateSmart(artigo.title ?? "", 45);
-  const resumeDescriptiom = truncateSmart(artigo.title ?? "", 90);
+  const resumeTitle = truncateSmart(artigo.title ?? '', 45);
+  const resumeDescriptiom = truncateSmart(artigo.title ?? '', 90);
 
   return (
     <Link href={`/artigos/${slug}`}>
