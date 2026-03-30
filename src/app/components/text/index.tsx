@@ -1,5 +1,3 @@
-import styles from './text.module.css';
-
 type Props = {
   children: React.ReactNode;
   className?: string;
