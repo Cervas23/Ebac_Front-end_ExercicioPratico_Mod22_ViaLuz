@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest --watchAll",
+    "test:ci": "jest --ci",
     "format": "prettier . --write"
   },
   "dependencies": {
