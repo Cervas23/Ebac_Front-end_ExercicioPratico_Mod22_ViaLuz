@@ -55,4 +55,4 @@ jobs:
       - name: Checkar formatação
         run: npm run format
       - name: Rodar testes
-        run: npm run test
+        run: npm run test:ci
