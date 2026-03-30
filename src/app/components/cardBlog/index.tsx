@@ -3,14 +3,15 @@ import { slugify } from "@/libs/slug";
 import styles from "./cardblog.module.css";
 import { Artigo } from "@/types/types";
 import { truncateSmart } from "@/libs/truncate";
+import Image from "next/image";
 
 type Props = {
-  artigo : Artigo;
+  artigo: Artigo;
 };
 
 const CardBlog = ({ artigo }: Props) => {
   const slug = slugify(artigo.title);
-  
+
   const resumeTitle = truncateSmart(artigo.title ?? "", 45);
   const resumeDescriptiom = truncateSmart(artigo.title ?? "", 90);
 
@@ -25,15 +26,12 @@ const CardBlog = ({ artigo }: Props) => {
           <h2>{resumeTitle}</h2>
 
           <p>{resumeDescriptiom}</p>
-          
+
           <p>{artigo.author}</p>
-          <span>
-            {artigo.publishedAt}
-          </span>
+          <span>{artigo.publishedAt}</span>
         </div>
       </article>
     </Link>
-        
   );
 };
 

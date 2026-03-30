@@ -1,6 +1,6 @@
 import { Artigo } from "@/types/types";
 import CardBlog from "../cardBlog";
-import styles from './bloglist.module.css'
+import styles from "./bloglist.module.css";
 
 type Props = {
   artigos: Artigo[];
