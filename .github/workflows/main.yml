@@ -24,3 +24,7 @@ jobs:
         run: npm install
       - name: Rodar build
         run: npm run build
+        env:
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+          NEWS_API_URL: ${{vars.NEWS_API_URL}}
+
