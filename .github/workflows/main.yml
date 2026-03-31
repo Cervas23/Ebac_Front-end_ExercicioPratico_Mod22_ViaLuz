@@ -56,3 +56,27 @@ jobs:
         run: npm run format
       - name: Rodar testes
         run: npm run test:ci
+        
+  deploy:
+    runs-on: ubuntu-latest # Imagem da máquina usada no CI
+    needs: tests # depende do processo tests
+
+    steps:
+      - name: Checkout  do código
+        uses: actions/checkout@v5
+
+      - name: Instalação do Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Instalação vercel CLI
+        run: npm install -g vercel@latest
+      - name: Deploy na vercel
+        run: vercel --prod --yes --token=${{secrets.VERCEL_TOKEN}}
+        env:
+          VERCEL_PROJECT_ID: ${{secrets.VERCEL_PROJECT_ID}}
+          VERCEL_ORG_ID: ${{secrets.VERCEL_ORG_ID}}
+     
