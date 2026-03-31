@@ -5,9 +5,9 @@ on:
   push:
     branches:
       - main
-    paths: # Dispara ao mudar arquivos nesses caminhos
-      - 'src/**' # só mudanças no cógigo fonte
-      - '.github/workflows/**' # Mudanças no próprio pipeline
+    # paths:  Dispara ao mudar arquivos nesses caminhos
+    #  - 'src/**'  só mudanças no cógigo fonte
+    #  - '.github/workflows/**'  Mudanças no próprio pipeline
   workflow_dispatch: # Habilita o btn "Run worflow" no github action
 jobs:
   # Primeiro Job: build
@@ -26,7 +26,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Instalação das Dependências
-        run: npm install
+        run: npm ci
       - name: Rodar build
         run: npm run build
         env:
