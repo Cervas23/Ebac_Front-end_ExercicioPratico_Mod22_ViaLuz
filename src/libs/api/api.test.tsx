@@ -1,8 +1,9 @@
 import { getNews } from './news';
 
 describe('getNews', () => {
-  afterEach(() => {
+  beforeEach(() => {
     jest.clearAllMocks();
+    process.env.NEWS_API_KEY = 'test_key';
   });
 
   test('deve chamar fetch com a URL correta', async () => {
@@ -44,6 +45,14 @@ describe('getNews', () => {
         ok: false,
       }),
     ) as jest.Mock;
+
+    const result = await getNews();
+
+    expect(result).toEqual([]);
+  });
+
+  test('deve retornar vazio sem API key', async () => {
+    delete process.env.NEWS_API_KEY;
 
     const result = await getNews();
 
