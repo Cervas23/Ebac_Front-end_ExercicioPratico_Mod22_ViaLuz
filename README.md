@@ -54,6 +54,27 @@ Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos prátic
 
 ---
 
+## 🔄 Integração Contínua (CI)
+
+Este projeto utiliza **GitHub Actions** para execução automática de build a cada alteração na branch `main`.
+
+### ▶️ Como verificar o pipeline
+
+1. Acesse a aba **Actions** do repositório no GitHub  
+2. Clique no workflow mais recente  
+3. Verifique os passos executados:
+   - Instalação de dependências
+   - Build do projeto
+
+### 📌 Quando o pipeline roda
+
+O pipeline é executado automaticamente a cada:
+- Push na branch `main`
+
+### ✅ Critério de sucesso
+
+O build deve finalizar sem erros. Caso falhe, verifique os logs para identificar o problema (ex: erro de API, dependência, etc).
+
 ## 📖 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram praticados:
