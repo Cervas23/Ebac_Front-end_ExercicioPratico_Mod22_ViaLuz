@@ -2,7 +2,6 @@ import { getNews } from '@/libs/api/news';
 import { slugify } from '@/libs/slug';
 import styles from './newsPage.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
 
 type Props = {
   params: Promise<{

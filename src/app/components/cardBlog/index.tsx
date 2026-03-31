@@ -3,7 +3,6 @@ import { slugify } from '@/libs/slug';
 import styles from './cardblog.module.css';
 import { Artigo } from '@/types/types';
 import { truncateSmart } from '@/libs/truncate';
-import Image from 'next/image';
 
 type Props = {
   artigo: Artigo;

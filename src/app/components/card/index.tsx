@@ -3,7 +3,6 @@ import styles from './card.module.css';
 import Link from 'next/link';
 import { slugify } from '@/libs/slug';
 import { truncateSmart } from '@/libs/truncate';
-import Image from 'next/image';
 
 type Props = {
   destino: Destino;

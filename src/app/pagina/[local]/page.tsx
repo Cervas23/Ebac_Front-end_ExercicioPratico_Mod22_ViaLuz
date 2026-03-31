@@ -3,7 +3,6 @@ import { slugify } from '@/libs/slug';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import styles from './destinoPage.module.css';
-import Image from 'next/image';
 
 type Props = {
   params: Promise<{
