@@ -1,59 +1,79 @@
 # 🚀 ViaLuz - Turismo na Velocidade da Luz
 
-Projeto desenvolvido com Next.js + React + TypeScript.
+Projeto desenvolvido como parte do curso de Front-End da EBAC, com foco na construção de interfaces web interativas utilizando HTML, CSS e JavaScript.
 
-A ViaLuz é uma empresa fictícia de turismo com temática futurista, focada em viagens na velocidade da luz 🌌.
+---
 
-## Sobre o Projeto
+## 🚀 Demonstração
 
-Este projeto simula o site institucional de uma empresa de turismo.
+🔗 Acesse o repositório:  
+https://github.com/Cervas23/Ebac_Front-end_ExercicioPratico_Mod22_ViaLuz
 
-Ele contém:
+---
 
--  Seção "Quem Somos"
--  Grid de destinos
--  Componentes reutilizáveis (Title, Text, Card)
--  Estilização com CSS Modules
--  Estrutura organizada de componentes
+## 📚 Sobre o Projeto
 
-##  Tecnologias Utilizadas
+O **ViaLuz** é uma aplicação web que simula uma página interativa, aplicando conceitos fundamentais de desenvolvimento front-end, como:
 
-- Next.js
-- React
-- TypeScript
-- CSS Modules
+- Estruturação semântica com HTML  
+- Estilização com CSS  
+- Interatividade com JavaScript  
+- Manipulação de eventos  
+- Validação de dados  
 
-##  Estrutura do Projeto
+Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos práticos adquiridos ao longo do curso.
 
-src/
-├── app/
-│ ├── page.tsx
-│ ├── page.module.css
-│
-├── components/
-│ ├── title/
-│ ├── text/
-│ ├── card/
-│
-public/
-├── images/
+---
 
+## 🛠️ Tecnologias utilizadas
 
-## Funcionalidades
+- HTML5  
+- CSS3  
+- JavaScript
+- Typescript
+- Git & GitHub  
 
-- Layout em duas colunas
-- Lista dinâmica de destinos
-- Componentização reutilizável
-- Design com tema espacial
+---
 
-## Destinos Exemplo
+## 📂 Estrutura do Projeto
 
-O projeto inclui 10 destinos turísticos fictícios para demonstração.
+├── index.html
+├── style.css
+├── script.js
+└── assets/
 
-## Autor
+---
 
-Projeto desenvolvido para fins de estudo e prática com Next.js.
+## ⚙️ Funcionalidades
 
+- 📌 Interface responsiva  
+- 📌 Manipulação dinâmica do DOM  
+- 📌 Validação de formulário  
+- 📌 Interações com o usuário  
+- 📌 Feedback visual de ações  
 
-"O próximo destino está mais perto do que você imagina."
+---
 
+## 📖 Aprendizados
+
+Durante o desenvolvimento deste projeto, foram praticados:
+
+- Organização de código front-end  
+- Separação de responsabilidades (HTML, CSS e JS)  
+- Uso de eventos no JavaScript  
+- Validação de entradas do usuário  
+- Boas práticas de versionamento com Git  
+
+---
+
+## Onde abrir o projeto
+
+[ViaLuz](https://vialuz.vercel.app/)
+
+👨‍💻 Autor
+
+Desenvolvido por Lucas Luz
+
+📌 Observações
+
+Este projeto tem fins educacionais e faz parte da formação em desenvolvimento front-end.
