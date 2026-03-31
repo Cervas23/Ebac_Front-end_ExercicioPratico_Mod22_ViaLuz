@@ -38,11 +38,15 @@ describe('getNews', () => {
     expect(result).toEqual(mockData.articles);
   });
 
-  test('deve lançar erro quando a API falhar', async () => {
-    global.fetch = jest.fn().mockResolvedValueOnce({
-      ok: false,
-    }) as jest.Mock;
+  test('deve retornar array vazio quando a API falhar', async () => {
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        ok: false,
+      }),
+    ) as jest.Mock;
 
-    await expect(getNews()).rejects.toThrow();
+    const result = await getNews();
+
+    expect(result).toEqual([]);
   });
 });
