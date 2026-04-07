@@ -75,6 +75,54 @@ O pipeline é executado automaticamente a cada:
 
 O build deve finalizar sem erros. Caso falhe, verifique os logs para identificar o problema (ex: erro de API, dependência, etc).
 
+## 🚧 Gargalos Identificados
+
+Durante a análise com Lighthouse e boas práticas de performance, foram identificados os seguintes pontos de melhoria:
+
+Uso de <img> sem otimização de carregamento
+Imagens externas não configuradas no Next.js
+Carregamento de imagens em formato não otimizado (SVG não tratado)
+Falta de definição de sizes em imagens com fill
+Possível impacto em métricas como LCP (Largest Contentful Paint)
+Re-renderizações desnecessárias em componentes
+Código não utilizado (dependências e imports)
+Possível excesso de JavaScript inicial
+
+## 🚀 Melhorias Aplicadas
+
+Foram implementadas otimizações focadas em performance e boas práticas modernas:
+
+## 🖼️ Imagens
+Substituição de <img> por <Image /> do Next.js
+Configuração de domínios externos no next.config.js
+Ajuste de URLs para uso de imagens em formato .png
+Implementação de sizes para responsividade
+Uso de priority para imagem LCP
+Ajuste de object-fit para evitar distorções e CLS
+
+## ⚡ Performance
+Redução de layout shift (CLS) com dimensionamento correto das imagens
+Uso de dynamic import para carregamento sob demanda
+Otimização de renderização com React.memo
+Redução de JavaScript inicial
+
+## 🧹 Código
+Remoção de dependências não utilizadas (ts-node, babel plugin)
+Limpeza de imports desnecessários
+Organização de estrutura de pastas
+Melhoria na legibilidade e manutenção do código
+
+## 📦 Configuração
+Ajustes no next.config.js para otimização de imagens
+Ativação de compressão e minificação automática
+Configuração de formatos modernos (webp / avif)
+
+## 🔍 SEO e Boas Práticas
+Ajuste de metadata das páginas
+Correção de possíveis bloqueios de indexação
+Melhor estrutura semântica
+Preparação para indexação em mecanismos de busca
+
 ## 📖 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram praticados:
@@ -83,7 +131,9 @@ Durante o desenvolvimento deste projeto, foram praticados:
 - Separação de responsabilidades (HTML, CSS e JS)  
 - Uso de eventos no JavaScript  
 - Validação de entradas do usuário  
-- Boas práticas de versionamento com Git  
+- Boas práticas de versionamento com Git
+- Otimização de performance com Lighthouse
+- Uso avançado de recursos do Next.js 
 
 ---
 
