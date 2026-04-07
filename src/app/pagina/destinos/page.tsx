@@ -1,15 +1,17 @@
 import Title from '@/app/components/title';
 import { destinos } from '@/libs/destinos.js';
-import Grid from '@/app/components/grid';
+import dynamic from 'next/dynamic';
 
-export const dynamic = 'force-static';
+const Grid = dynamic(() => import('@/app/components/grid'), {
+  loading: () => <p>Carregando destinos...</p>,
+});
 
 const PageDestinos = () => {
   return (
-    <div>
+    <section>
       <Title title="Destinos mais procurados."></Title>
       <Grid destinos={destinos} />
-    </div>
+    </section>
   );
 };
 

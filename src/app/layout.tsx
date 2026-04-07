@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'ViaLuz',
   description:
     'Todo o planejamento da sua viagem feito tão rápido e perfeito, quanto a velocidade da luz.',
+  openGraph: {
+    title: 'ViaLuz Destinos',
+    description: 'Descubra lugares incríveis',
+  },
 };
 
 export default function RootLayout({

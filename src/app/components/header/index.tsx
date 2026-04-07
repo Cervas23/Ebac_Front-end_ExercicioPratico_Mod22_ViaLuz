@@ -10,9 +10,15 @@ const Header = () => {
         </h1>
         <nav className={styles.header__nav}>
           <Link href="/"> Home </Link>
-          <Link href="/pagina/destinos"> Destinos </Link>
-          <Link href="/pagina/mais"> Mais Produtos </Link>
-          <Link href="/pagina/blog"> Blog do Vialujante </Link>
+          <Link href="/pagina/destinos" prefetch>
+            Destinos
+          </Link>
+          <Link href="/pagina/mais" prefetch>
+            Mais Produtos
+          </Link>
+          <Link href="/pagina/blog" prefetch>
+            Blog do Vialujante
+          </Link>
         </nav>
       </div>
     </header>

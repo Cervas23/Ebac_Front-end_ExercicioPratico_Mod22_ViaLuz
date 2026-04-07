@@ -1,3 +1,4 @@
+import React from 'react';
 import { Destino } from '@/types/types';
 import styles from './card.module.css';
 import Link from 'next/link';
@@ -39,4 +40,4 @@ const Card = ({ destino }: Props) => {
   );
 };
 
-export default Card;
+export default React.memo(Card);
