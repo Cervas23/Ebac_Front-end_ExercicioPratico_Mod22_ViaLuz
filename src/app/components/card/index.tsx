@@ -3,6 +3,7 @@ import styles from './card.module.css';
 import Link from 'next/link';
 import { slugify } from '@/libs/slug';
 import { truncateSmart } from '@/libs/truncate';
+import Image from 'next/image';
 
 type Props = {
   destino: Destino;
@@ -17,13 +18,18 @@ const Card = ({ destino }: Props) => {
   return (
     <div className={styles.card} key={id}>
       <Link href={`/pagina/${slug}`}>
-        <img
-          src={imagem}
-          alt={`País de destino ${local}`}
-          width={300}
-          height={200}
-          className={styles.card__poster}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            src={imagem}
+            alt={`País de destino ${local}`}
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              25vw"
+            priority
+            className={styles.card__poster}
+          />
+        </div>
         <div className={styles.card__info}>
           <h3 className={styles.card__title}>{local}</h3>
           <p className={styles.card__description}>{resumeDescriptiom}</p>

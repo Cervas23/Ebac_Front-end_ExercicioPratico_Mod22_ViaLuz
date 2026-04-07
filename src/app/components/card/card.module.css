@@ -10,9 +10,17 @@
   }
 }
 
-.card__poster {
+.imageContainer {
+  position: relative;
   width: 100%;
-  display: block;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__poster {
+  object-fit: contain;
 }
 
 .card__info {

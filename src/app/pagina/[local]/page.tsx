@@ -3,6 +3,7 @@ import { slugify } from '@/libs/slug';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import styles from './destinoPage.module.css';
+import Image from 'next/image';
 
 type Props = {
   params: Promise<{
@@ -30,10 +31,13 @@ const DetalheDestino = async ({ params }: Props) => {
           </Link>
           <section>
             <figure>
-              <img
+              <Image
                 className={styles.destino__imagem}
                 src={imagem}
                 alt={`Foto do destino ${destino.local}`}
+                width={600}
+                height={400}
+                priority
               />
             </figure>
             <article className={styles.destino__info}>
