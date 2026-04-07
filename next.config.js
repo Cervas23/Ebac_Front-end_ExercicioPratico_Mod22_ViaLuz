@@ -6,6 +6,7 @@ const nextConfig = {
         hostname: 'placehold.co',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
 };
 

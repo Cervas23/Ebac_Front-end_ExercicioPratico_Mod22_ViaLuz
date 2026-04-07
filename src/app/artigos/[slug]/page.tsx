@@ -52,6 +52,7 @@ export default async function BlogDetalhe({ params }: Props) {
                 className={styles.news__imagem}
                 src={artigo.urlToImage}
                 alt={`Foto da notícia ${artigo.title}`}
+                loading="lazy"
               />
             </figure>
             <article className={styles.news__info}>

@@ -14,6 +14,7 @@ export default function Home() {
             alt="Imagem de um viajante no espaço"
             width={500}
             height={300}
+            priority
           />
         </div>
         <div className={styles.about__content}>

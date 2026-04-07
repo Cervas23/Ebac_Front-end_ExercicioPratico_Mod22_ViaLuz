@@ -18,7 +18,7 @@ const CardBlog = ({ artigo }: Props) => {
     <Link href={`/artigos/${slug}`}>
       <article className={styles.blogCard}>
         {artigo.urlToImage && (
-          <img src={artigo.urlToImage} alt={artigo.title} />
+          <img src={artigo.urlToImage} alt={artigo.title} loading="lazy" />
         )}
 
         <div className={styles.blogContent}>
