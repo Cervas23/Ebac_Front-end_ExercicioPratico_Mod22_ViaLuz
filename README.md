@@ -124,12 +124,10 @@ Melhor estrutura semântica
 Preparação para indexação em mecanismos de busca
 
 ## Comparativos
-Antes
-<img width="661" height="190" alt="image" src="https://github.com/user-attachments/assets/d4d78cf6-a9ed-4930-a46d-e8d954050cf0" />
+### Antes
 <img width="661" height="190" alt="image" src="https://github.com/user-attachments/assets/d4d78cf6-a9ed-4930-a46d-e8d954050cf0" />
 
-Depois
-<img width="632" height="193" alt="image" src="https://github.com/user-attachments/assets/9833423c-17b0-4a32-95e4-b8e541a4988f" />
+### Depois
 <img width="632" height="193" alt="image" src="https://github.com/user-attachments/assets/9833423c-17b0-4a32-95e4-b8e541a4988f" />
 
 
